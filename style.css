@@ -2,7 +2,7 @@
 
 :root {
   --Lys-Grn: #497822;
-  --black: #000000;
+  --grey-333: #333;
   --white-color: #fff;
 }
 
@@ -92,6 +92,15 @@ ul {
 
 p:last-of-type {
 	margin: 0;
+}
+
+::placeholder {
+  color: #000000;
+  opacity: 1; 
+}
+
+::-ms-input-placeholder { 
+  color: #000000;
 }
 
 /*
@@ -329,22 +338,18 @@ Five Column CSS Start
   margin-top: 7px;
 }
 
-.five-cols-active .slick-slider {
-  margin:0 -15px;
-}
+@media only screen and (max-width:991px) {
 
-.five-cols-active .slick-slide {
-  padding:10px;
-  margin-right:15px;
-  margin-left:15px;
-}
+  .five-cols-inner {
+    flex-flow: row wrap;
+  }
+  
+ }
 /*
 ============================
 Five Column CSS End
 ============================
 */
-
-
 
 /*
 ============================
@@ -364,7 +369,7 @@ Full Image CSS Start
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,50%);
+  transform: translate(-50%,-50%);
   text-align: center;
 }
 
@@ -380,15 +385,39 @@ Full Image CSS Start
 	position: absolute;
 	top: 50%;
 	left: 30px;
-  cursor: pointer;
-  z-index: 3;
-} 
+	cursor: pointer;
+	z-index: 3;
+	transform: translateY(-50%);
+}
 
 .full-image-slider .next_arrow.slick-arrow {
 	left: auto;
 	right: 30px;
 }
 
+@media only screen and (max-width:991px) {
+
+  .five-column-section {
+    padding: 45px 0;
+  }
+
+  .full-image {
+    height: 350px;
+  }
+  
+ }
+ 
+@media only screen and (max-width:767px) {
+
+  .full-image-slider .slick-arrow {
+    font-size: 25px;
+  }
+
+  .full-image-content h3 {
+    font-size: 20px;
+  }
+
+ }
 /*
 ============================
 Full Image CSS End
@@ -430,6 +459,25 @@ Two Column Css Start
 	font-weight: 700;
 }
 
+@media only screen and (max-width:991px) {
+
+ .two-column-section {
+  padding: 20px 0;
+ }
+  
+ }
+ @media only screen and (max-width:767px) {
+
+  .two-col-boxes {
+    display: block;
+  }
+
+  .two-cols-content {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+ }
 /*
 ============================
 Two Column Css End
@@ -442,8 +490,111 @@ Footer Css Start
 ============================
 */
 
+.site-footer {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  background-color: #fff;
+}
 
+.widget-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  color: #121211;
+}
 
+.footer-menu ul li a {
+  color: var(--grey-333);
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  padding: 5px 0;
+  transition: 0.3s all ease;
+}
+
+.footer-menu ul li a:hover {
+ color: #497822;
+}
+
+.social-medias li a {
+  color: #1D2118;
+  font-size: 22px;
+  display: inline-block;
+  margin-right: 12px;
+  margin-top: 12px;
+}
+
+.field_rounded {
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  background-color: #fff;
+  padding: 4px 10px;
+
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  margin: 0;
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.field input {
+  width: 100%;
+  display: block;
+  outline: none;
+  border: 0;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.field .submit {
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 12px 45px;
+  display: inline-block;
+  transition: 0.3s all ease;
+  border-radius: 33px;
+  color: var(--white-color);
+  background-color: var(--Lys-Grn);
+}
+
+.field .submit:hover {
+ color: #fff;
+ background: #000;
+}
+
+@media only screen and (max-width:991px) {
+
+.site-footer {
+  padding-top: 35px;
+  padding-bottom: 50px;
+}
+
+  .footer-box {
+   margin-bottom: 20px;
+  }
+
+  }
+
+@media only screen and (max-width:767px) {
+  .site-footer {
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+  }
 /*
 ============================
 Footer Css End
@@ -451,44 +602,20 @@ Footer Css End
 */
 
 
-
-
-
-
-
 /*
 ============================
-Responsive Css Start
+Container Width Css
 ============================
 */
 
 @media screen and (min-width: 1360px) {
-
  .container{
     max-width: 1320px;
  }
 
- 
  }
- /* ----- Laptop device screen ----- */
- @media only screen and (max-width:1199px) {
-
-  .five-cols-inner {
-    flex-flow: row wrap;
-  }
-  
- }
- /* ----- Tablet device screen ----- */
- @media only screen and (max-width:991px) {
- 
- }
- /* ----- Mobile device screen ----- */
- @media only screen and (max-width:767px) {
- 
- }
- 
  /*
  ============================
- Responsive Css End
+Container Width Css End
  ============================
  */

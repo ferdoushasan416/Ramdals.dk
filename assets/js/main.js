@@ -1,7 +1,7 @@
 (function ($) {
 "use strict";
 
-    $(window).on('scroll', function () {
+    $(window).on('scroll', function () { 
       var scroll = $(window).scrollTop();
       if (scroll < 245) {
         $(".header-sticky").removeClass("sticky");
@@ -21,7 +21,7 @@
          
       });  
 
-
+      
 // WOW active
 new WOW().init();
 
