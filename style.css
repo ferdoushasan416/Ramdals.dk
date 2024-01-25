@@ -191,6 +191,10 @@ Header Css Start
   transition: 0.3s all ease;
 }
 
+.header-icon-wrapper a:hover {
+	opacity: 0.8;
+}
+
 .header-icon-wrapper a:not(:last-of-type) {
   margin-right: 45px;
 }
@@ -250,21 +254,20 @@ Five Column CSS Start
 }
 
 .product-filter-list li a {
-  margin: 0 50px;
   color: #708935;
-  cursor: pointer;
-  display: block;
-}
-
-.product-filter-list li .active {
   width: 70px;
   height: 70px;
+  margin: 0 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 	border-radius: 14px;
-	background: #708935;
-	box-shadow: 0px 2px 48px 0px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  box-shadow: 0px 2px 48px 0px rgba(0, 0, 0, 0.08);
+}
+
+.product-filter-list li .active {
+  background: #708935;
 }
 
 .product-filter-list li .active span {
@@ -295,6 +298,7 @@ Five Column CSS Start
 
 .five-col-thumb {
   height: 250px;
+  width: 100%;
   border-radius: 14px;
   background: #D8D8D8;
   position: relative;
