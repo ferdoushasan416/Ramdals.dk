@@ -154,12 +154,6 @@ Main Btn Css End
   padding-bottom: 40px;
 }
 
-.section-title h3 {
-  color: #1E2022;
-  font-size: 26px;
-  font-weight: 600;
-}
-
 /*
 ============================
 Global CSS END
@@ -250,6 +244,7 @@ Five Column CSS Start
   display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 48px;
   flex-wrap: wrap;
 }
 
@@ -257,7 +252,6 @@ Five Column CSS Start
   color: #708935;
   width: 70px;
   height: 70px;
-  margin: 0 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,6 +277,12 @@ Five Column CSS Start
   margin-top: 17px;
 }
 
+.section-title h3 {
+  color: #1E2022;
+  font-size: 26px;
+  font-weight: 600;
+}
+
 .five-cols-inner {
 	display: flex;
 	align-items: center;
@@ -297,31 +297,31 @@ Five Column CSS Start
 }
 
 .five-col-thumb {
-  height: 250px;
+  position: relative;
+}
+
+.five-col-thumb img {
   width: 100%;
   border-radius: 14px;
-  background: #D8D8D8;
-  position: relative;
-  background-size: cover;
-  background-position: center;
 }
 
 .heart-icon {
   position: absolute;
   top: 12px;
-  left: 12px;
+  left: 14px;
   font-size: 16px;
   stroke-width: 2px;
   color: #fff;
 }
 
 .five-col-box h5 {
-  color: #1E2022;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-top: 10px;
-  position: relative;
+	color: #1E2022;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-top: 10px;
+	position: relative;
+	margin-bottom: 0;
 }
 
 .five-col-box h5:after {
@@ -342,13 +342,21 @@ Five Column CSS Start
   margin-top: 7px;
 }
 
+@media only screen and (max-width:1199px) {
+
+  .five-cols-inner {
+    column-gap: 35px;
+  }
+  
+ }
 @media only screen and (max-width:991px) {
 
   .five-cols-inner {
     flex-flow: row wrap;
   }
-  
+
  }
+ 
 /*
 ============================
 Five Column CSS End
@@ -472,13 +480,13 @@ Two Column Css Start
  }
  @media only screen and (max-width:767px) {
 
-  .two-col-boxes {
-    display: block;
-  }
+ .two-col-boxes {
+   display: block;
+ }
 
-  .two-cols-content {
-    width: 100%;
-    margin-top: 5px;
+ .two-cols-content {
+   width: 100%;
+   margin-top: 5px;
   }
 
  }
