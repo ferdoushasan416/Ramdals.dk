@@ -14,6 +14,11 @@
           $('.full-image-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
+            autoplay: false,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
             doots: false,
             prevArrow: '<span class="priv_arrow"><i class="fa-solid fa-angle-left"></i></span>',
             nextArrow: ' <span class="next_arrow"><i class="fa-solid fa-angle-right"></i></span>',
